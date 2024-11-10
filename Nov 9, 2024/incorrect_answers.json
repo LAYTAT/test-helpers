@@ -1,1 +1,10 @@
-{}
+{
+    "AUC-ROC": "A plot of recall against false positive rate; scores closer to 1 indicate better accuracy.",
+    "Precision": "The proportion of true positives among all positive predictions.",
+    "Continued Pre-Training": "Ongoing training using unlabeled, industry-specific data.",
+    "SageMaker Inference": "Provides options like real-time, batch, serverless, and asynchronous inference for model deployment.",
+    "R Squared (R2)": "Percentage of variance explained by a model, indicating its predictive power.",
+    "BERTScore": "Metric using pretrained contextual embeddings to evaluate semantic similarity between generated and reference text.",
+    "Fairness": "Impartial treatment without discrimination.",
+    "Mean Squared Error (MSE)": "The average squared difference between predicted and actual values, used in regression model evaluation."
+}

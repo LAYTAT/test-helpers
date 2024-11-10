@@ -1,87 +1,358 @@
 {
-    "SageMaker Data Wrangler": "Data Preparation, Transformation, and feature engineering Tool with a single interface for data selection, cleaning, exploration, visualization, and processing. It includes SQL support for data queries and data quality tools to analyze data quality.",
-    "SageMaker Model Cards": "A feature of SageMaker to record information about ML models, including training details, evaluation metrics, and model performance.",
-    "SageMaker Canvas": "A tool for building ML models without needing to write any code. It does not have models for content moderation.",
-    "Amazon SageMaker Ground Truth": "A service that uses a human workforce to create accurate labels for data used to train models. It does not store model training and performance information for audit purposes.",
-    "SageMaker Model Monitor": "An automated alert system that detects model quality issues, such as data drift and anomalies. It ensures model performance remains stable over time.",
-    "SageMaker Studio": "An integrated development environment (IDE) for building machine learning models, including JupyterLab, RStudio, and Visual Studio Code.",
-    "Guardrails for Amazon Bedrock": "Evaluates user inputs and foundation model responses based on specific policies, providing safeguards regardless of the underlying foundation model.",
-    "Amazon Rekognition": "A fully managed AI service for image and video analysis. It can identify inappropriate content in images, including drawings, paintings, and animations.",
-    "AWS Artifact": "An audit resource providing on-demand access to AWS security and compliance documentation.",
-    "AWS CloudTrail": "A service that tracks user activity and API usage on AWS for audit purposes. It records actions taken by users, roles, and services in an AWS account.",
-    "Amazon CloudWatch": "A centralized logging service for monitoring AWS resources, application logs, and performance metrics.",
-    "AWS Trusted Advisor": "Provides recommendations for cost optimization, security, and resilience. Evaluates an AWS environment and offers actions to align with best practices.",
-    "Amazon Macie": "Uses machine learning to discover, monitor, and protect sensitive data in Amazon S3. It helps comply with data governance and privacy regulations.",
-    "AWS Config": "Tracks configurations of AWS resources, identifying settings that don’t meet compliance standards, like a publicly accessible S3 bucket.",
-    "Amazon DocumentDB": "A fully managed, native JSON document database supporting vector search. Can store, index, and search millions of vectors with millisecond response times.",
-    "Amazon OpenSearch Service": "A fully managed service to deploy, scale, and operate OpenSearch. It supports high query throughput and use cases like semantic search and recommendation engines.",
-    "SageMaker Clarify": "A tool in SageMaker for explaining model predictions and assessing bias in datasets. Includes tools for foundation model evaluation, comparing quality and responsibility metrics.",
-    "SageMaker JumpStart": "A hub for pre-trained models but does not allow user models to be added.",
-    "SageMaker Model Registry": "A managed catalog for machine learning models, allowing management of model versions and metadata.",
-    "Embeddings": "Vector representations of content that capture semantic relationships, enabling similar content to have close vector representations.",
-    "Amazon Inspector": "A vulnerability management service that scans EC2 workloads for software vulnerabilities and unintended network exposure.",
-    "Amazon Comprehend": "An NLP service for extracting insights from documents, like entities, key phrases, sentiment, and syntax.",
-    "Amazon Textract": "Extracts text from documents, including handwritten text.",
-    "Amazon Kendra": "An intelligent search service that uses semantic understanding to provide specific answers to questions.",
-    "Amazon Q Business": "A generative AI virtual assistant for answering questions, summarizing, and generating content, based on provided data.",
-    "Retrieval Augmented Generation (RAG)": "Optimizes the output of large language models by referencing authoritative knowledge bases outside their training data.",
-    "Fine Tuning": "Further training a pre-trained model on specific tasks to improve accuracy, specificity, and reduce bias.",
-    "Continued Pre-Training": "Ongoing training using unlabeled, industry-specific data.",
-    "Transfer Learning": "A method of using a model developed for one task as a starting point for another.",
-    "Chain of Thought": "A prompt technique for breaking down complex questions into smaller parts, often used in arithmetic and logical tasks.",
-    "Amazon Lex": "A fully managed AI service for designing conversational interfaces in applications using voice and text.",
-    "Amazon Transcribe": "Converts speech to text.",
-    "Amazon Polly": "Converts text to speech.",
-    "Amazon Personalize": "Provides personalized product recommendations.",
-    "Amazon Translate": "Translates between 75 languages.",
-    "Amazon Forecast": "Predicts future points in time series data.",
-    "Amazon Fraud Detector": "Detects fraud in online transactions, product reviews, checkouts, and payments.",
-    "Bias": "Unfair prejudice or preference that may affect model predictions.",
-    "Fairness": "Impartial treatment without discrimination.",
-    "Overfitting": "When a model performs well on training data but poorly on new data due to high variance.",
-    "Underfitting": "When a model is too simple to capture patterns in data, characterized by high bias and low variance.",
-    "Explainability": "Understanding how a model makes predictions in human terms, useful for interpreting model decisions.",
-    "Generative AI Model": "AI models that produce novel, human-like outputs based on their training data.",
-    "ROUGE": "Metric used to evaluate text summarization and machine translation quality, emphasizing recall.",
-    "BLEU": "A precision-based metric for evaluating machine-translated text quality.",
-    "Top K": "Limits the selection of tokens in language models to the K most probable options for controlled diversity.",
-    "Top P": "Limits word choice in language models based on the probability distribution to ensure coherent outputs.",
-    "Temperature": "Controls the randomness in model output. Higher values yield more diverse responses; lower values make output more deterministic.",
-    "F1": "Metric that combines precision and recall for evaluating classification models.",
-    "BERTScore": "Metric using pretrained contextual embeddings to evaluate semantic similarity between generated and reference text.",
-    "Semantic Robustness": "Measures how small input changes affect model output consistency.",
-    "Perplexity": "Measures how well a language model predicts a test set, with lower values indicating better predictions.",
-    "Accuracy": "The percentage of correct predictions in a classification model.",
-    "Precision": "The proportion of true positives among all positive predictions.",
-    "Recall": "The proportion of true positives among all actual positives.",
-    "False Positive Rate": "The proportion of false positives among all negative instances.",
-    "AUC-ROC": "A plot of recall against false positive rate; scores closer to 1 indicate better accuracy.",
-    "Mean Squared Error (MSE)": "The average squared difference between predicted and actual values, used in regression model evaluation.",
-    "R Squared (R2)": "Percentage of variance explained by a model, indicating its predictive power.",
-    "Root Mean Squared Error (RMSE)": "The square root of MSE, indicating the presence of large errors or outliers in model predictions.",
-    "Amazon Bedrock": "A fully managed service for accessing and customizing foundation models for applications.",
-    "Low Bias and Low Variance": "Ideal outcome in model training with minimal assumptions and noise.",
-    "Overfitting (Low Bias, High Variance)": "Model captures noise, performing poorly on new data.",
-    "Underfitting (High Bias, Low Variance)": "Model misses patterns in data, leading to poor predictions.",
-    "Hallucination": "AI response that isn't justified by training data.",
-    "Gen AI Architectures": "Include GANs, VAEs, Transformers, and Diffusion Models.",
-    "GAN": "A neural network architecture where two networks compete to improve content generation.",
-    "VAE": "A deep learning algorithm for generating content, anomaly detection, and noise removal.",
-    "Transformers": "A neural network architecture that learns context in sequence data.",
-    "AWS Audit Manager": "Helps simplify compliance assessments by continually auditing AWS usage.",
-    "SageMaker Inference": "Provides options like real-time, batch, serverless, and asynchronous inference for model deployment.",
-    "AWS AI Service Cards": "Resource to help customers understand AWS AI services better.",
-    "Amazon SageMaker Debugger": "Monitors and profiles model training jobs to optimize model performance.",
-    "Amazon Augmented AI (Amazon A2I)": "Creates workflows for human review of ML model predictions.",
-    "Amazon SageMaker Autopilot": "Provides insights into model predictions using tools from SageMaker Clarify.",
-    "Epoch": "A single pass through the entire dataset in training.",
-    "AWS PrivateLink": "Provides private connectivity between VPCs and AWS services without using the public internet.",
-    "Learning Rate": "Controls the speed at which model parameters are updated during training, affecting convergence stability.",
-    "Supervised Learning": "Training a model on labeled data to learn input-output mappings.",
-    "Unsupervised Learning": "Model training on unlabeled data to discover patterns or clusters.",
-    "Semi-Supervised Learning": "A hybrid approach using both labeled and unlabeled data for training.",
-    "Stop Sequences": "Tokens that instruct a model to cease text generation, ensuring structured responses.",
-    "Intelligent Document Processing (IDP)": "Automates data extraction from paper-based documents for digital processes.",
-    "Feature Extraction": "Technique to create new features from raw data, useful for unstructured data like images or text.",
-    "Feature Selection": "Selecting the most relevant features for modeling, reducing complexity.",
+    "SageMaker Data Wrangler": {
+        "description": "Data Preparation, Transformation, and feature engineering Tool with a single interface for data selection, cleaning, exploration, visualization, and processing. It includes SQL support for data queries and data quality tools to analyze data quality.",
+        "status": "tested"
+    },
+    "SageMaker Model Cards": {
+        "description": "A feature of SageMaker to record information about ML models, including training details, evaluation metrics, and model performance.",
+        "status": "tested"
+    },
+    "SageMaker Canvas": {
+        "description": "A tool for building ML models without needing to write any code. It does not have models for content moderation.",
+        "status": "tested"
+    },
+    "Amazon SageMaker Ground Truth": {
+        "description": "A service that uses a human workforce to create accurate labels for data used to train models. It does not store model training and performance information for audit purposes.",
+        "status": "tested"
+    },
+    "SageMaker Model Monitor": {
+        "description": "An automated alert system that detects model quality issues, such as data drift and anomalies. It ensures model performance remains stable over time.",
+        "status": "tested"
+    },
+    "SageMaker Studio": {
+        "description": "An integrated development environment (IDE) for building machine learning models, including JupyterLab, RStudio, and Visual Studio Code.",
+        "status": "tested"
+    },
+    "Guardrails for Amazon Bedrock": {
+        "description": "Evaluates user inputs and foundation model responses based on specific policies, providing safeguards regardless of the underlying foundation model.",
+        "status": "tested"
+    },
+    "Amazon Rekognition": {
+        "description": "A fully managed AI service for image and video analysis. It can identify inappropriate content in images, including drawings, paintings, and animations.",
+        "status": "tested"
+    },
+    "AWS Artifact": {
+        "description": "An audit resource providing on-demand access to AWS security and compliance documentation.",
+        "status": "tested"
+    },
+    "AWS CloudTrail": {
+        "description": "A service that tracks user activity and API usage on AWS for audit purposes. It records actions taken by users, roles, and services in an AWS account.",
+        "status": "tested"
+    },
+    "Amazon CloudWatch": {
+        "description": "A centralized logging service for monitoring AWS resources, application logs, and performance metrics.",
+        "status": "tested"
+    },
+    "AWS Trusted Advisor": {
+        "description": "Provides recommendations for cost optimization, security, and resilience. Evaluates an AWS environment and offers actions to align with best practices.",
+        "status": "tested"
+    },
+    "Amazon Macie": {
+        "description": "Uses machine learning to discover, monitor, and protect sensitive data in Amazon S3. It helps comply with data governance and privacy regulations.",
+        "status": "tested"
+    },
+    "AWS Config": {
+        "description": "Tracks configurations of AWS resources, identifying settings that don\u2019t meet compliance standards, like a publicly accessible S3 bucket.",
+        "status": "tested"
+    },
+    "Amazon DocumentDB": {
+        "description": "A fully managed, native JSON document database supporting vector search. Can store, index, and search millions of vectors with millisecond response times.",
+        "status": "tested"
+    },
+    "Amazon OpenSearch Service": {
+        "description": "A fully managed service to deploy, scale, and operate OpenSearch. It supports high query throughput and use cases like semantic search and recommendation engines.",
+        "status": "tested"
+    },
+    "SageMaker Clarify": {
+        "description": "A tool in SageMaker for explaining model predictions and assessing bias in datasets. Includes tools for foundation model evaluation, comparing quality and responsibility metrics.",
+        "status": "tested"
+    },
+    "SageMaker JumpStart": {
+        "description": "A hub for pre-trained models but does not allow user models to be added.",
+        "status": "tested"
+    },
+    "SageMaker Model Registry": {
+        "description": "A managed catalog for machine learning models, allowing management of model versions and metadata.",
+        "status": "tested"
+    },
+    "Embeddings": {
+        "description": "Vector representations of content that capture semantic relationships, enabling similar content to have close vector representations.",
+        "status": "tested"
+    },
+    "Amazon Inspector": {
+        "description": "A vulnerability management service that scans EC2 workloads for software vulnerabilities and unintended network exposure.",
+        "status": "tested"
+    },
+    "Amazon Comprehend": {
+        "description": "An NLP service for extracting insights from documents, like entities, key phrases, sentiment, and syntax.",
+        "status": "tested"
+    },
+    "Amazon Textract": {
+        "description": "Extracts text from documents, including handwritten text.",
+        "status": "tested"
+    },
+    "Amazon Kendra": {
+        "description": "An intelligent search service that uses semantic understanding to provide specific answers to questions.",
+        "status": "tested"
+    },
+    "Amazon Q Business": {
+        "description": "A generative AI virtual assistant for answering questions, summarizing, and generating content, based on provided data.",
+        "status": "tested"
+    },
+    "Retrieval Augmented Generation (RAG)": {
+        "description": "Optimizes the output of large language models by referencing authoritative knowledge bases outside their training data.",
+        "status": "tested"
+    },
+    "Fine Tuning": {
+        "description": "Further training a pre-trained model on specific tasks to improve accuracy, specificity, and reduce bias.",
+        "status": "tested"
+    },
+    "Continued Pre-Training": {
+        "description": "Ongoing training using unlabeled, industry-specific data.",
+        "status": "tested"
+    },
+    "Transfer Learning": {
+        "description": "A method of using a model developed for one task as a starting point for another.",
+        "status": "tested"
+    },
+    "Chain of Thought": {
+        "description": "A prompt technique for breaking down complex questions into smaller parts, often used in arithmetic and logical tasks.",
+        "status": "tested"
+    },
+    "Amazon Lex": {
+        "description": "A fully managed AI service for designing conversational interfaces in applications using voice and text.",
+        "status": "tested"
+    },
+    "Amazon Transcribe": {
+        "description": "Converts speech to text.",
+        "status": "tested"
+    },
+    "Amazon Polly": {
+        "description": "Converts text to speech.",
+        "status": "tested"
+    },
+    "Amazon Personalize": {
+        "description": "Provides personalized product recommendations.",
+        "status": "tested"
+    },
+    "Amazon Translate": {
+        "description": "Translates between 75 languages.",
+        "status": "tested"
+    },
+    "Amazon Forecast": {
+        "description": "Predicts future points in time series data.",
+        "status": "tested"
+    },
+    "Amazon Fraud Detector": {
+        "description": "Detects fraud in online transactions, product reviews, checkouts, and payments.",
+        "status": "tested"
+    },
+    "Bias": {
+        "description": "Unfair prejudice or preference that may affect model predictions.",
+        "status": "tested"
+    },
+    "Fairness": {
+        "description": "Impartial treatment without discrimination.",
+        "status": "tested"
+    },
+    "Overfitting": {
+        "description": "When a model performs well on training data but poorly on new data due to high variance.",
+        "status": "tested"
+    },
+    "Underfitting": {
+        "description": "When a model is too simple to capture patterns in data, characterized by high bias and low variance.",
+        "status": "tested"
+    },
+    "Explainability": {
+        "description": "Understanding how a model makes predictions in human terms, useful for interpreting model decisions.",
+        "status": "tested"
+    },
+    "Generative AI Model": {
+        "description": "AI models that produce novel, human-like outputs based on their training data.",
+        "status": "tested"
+    },
+    "ROUGE": {
+        "description": "Metric used to evaluate text summarization and machine translation quality, emphasizing recall.",
+        "status": "tested"
+    },
+    "BLEU": {
+        "description": "A precision-based metric for evaluating machine-translated text quality.",
+        "status": "tested"
+    },
+    "Top K": {
+        "description": "Limits the selection of tokens in language models to the K most probable options for controlled diversity.",
+        "status": "tested"
+    },
+    "Top P": {
+        "description": "Limits word choice in language models based on the probability distribution to ensure coherent outputs.",
+        "status": "tested"
+    },
+    "Temperature": {
+        "description": "Controls the randomness in model output. Higher values yield more diverse responses; lower values make output more deterministic.",
+        "status": "tested"
+    },
+    "F1": {
+        "description": "Metric that combines precision and recall for evaluating classification models.",
+        "status": "tested"
+    },
+    "BERTScore": {
+        "description": "Metric using pretrained contextual embeddings to evaluate semantic similarity between generated and reference text.",
+        "status": "tested"
+    },
+    "Semantic Robustness": {
+        "description": "Measures how small input changes affect model output consistency.",
+        "status": "tested"
+    },
+    "Perplexity": {
+        "description": "Measures how well a language model predicts a test set, with lower values indicating better predictions.",
+        "status": "tested"
+    },
+    "Accuracy": {
+        "description": "The percentage of correct predictions in a classification model.",
+        "status": "tested"
+    },
+    "Precision": {
+        "description": "The proportion of true positives among all positive predictions.",
+        "status": "tested"
+    },
+    "Recall": {
+        "description": "The proportion of true positives among all actual positives.",
+        "status": "tested"
+    },
+    "False Positive Rate": {
+        "description": "The proportion of false positives among all negative instances.",
+        "status": "tested"
+    },
+    "AUC-ROC": {
+        "description": "A plot of recall against false positive rate; scores closer to 1 indicate better accuracy.",
+        "status": "tested"
+    },
+    "Mean Squared Error (MSE)": {
+        "description": "The average squared difference between predicted and actual values, used in regression model evaluation.",
+        "status": "tested"
+    },
+    "R Squared (R2)": {
+        "description": "Percentage of variance explained by a model, indicating its predictive power.",
+        "status": "tested"
+    },
+    "Root Mean Squared Error (RMSE)": {
+        "description": "The square root of MSE, indicating the presence of large errors or outliers in model predictions.",
+        "status": "tested"
+    },
+    "Amazon Bedrock": {
+        "description": "A fully managed service for accessing and customizing foundation models for applications.",
+        "status": "tested"
+    },
+    "Low Bias and Low Variance": {
+        "description": "Ideal outcome in model training with minimal assumptions and noise.",
+        "status": "tested"
+    },
+    "Overfitting (Low Bias, High Variance)": {
+        "description": "Model captures noise, performing poorly on new data.",
+        "status": "tested"
+    },
+    "Underfitting (High Bias, Low Variance)": {
+        "description": "Model misses patterns in data, leading to poor predictions.",
+        "status": "tested"
+    },
+    "Hallucination": {
+        "description": "AI response that isn't justified by training data.",
+        "status": "tested"
+    },
+    "Gen AI Architectures": {
+        "description": "Include GANs, VAEs, Transformers, and Diffusion Models.",
+        "status": "tested"
+    },
+    "GAN": {
+        "description": "A neural network architecture where two networks compete to improve content generation.",
+        "status": "tested"
+    },
+    "VAE": {
+        "description": "A deep learning algorithm for generating content, anomaly detection, and noise removal.",
+        "status": "tested"
+    },
+    "Transformers": {
+        "description": "A neural network architecture that learns context in sequence data.",
+        "status": "tested"
+    },
+    "AWS Audit Manager": {
+        "description": "Helps simplify compliance assessments by continually auditing AWS usage.",
+        "status": "tested"
+    },
+    "SageMaker Inference": {
+        "description": "Provides options like real-time, batch, serverless, and asynchronous inference for model deployment.",
+        "status": "tested"
+    },
+    "AWS AI Service Cards": {
+        "description": "Resource to help customers understand AWS AI services better.",
+        "status": "tested"
+    },
+    "Amazon SageMaker Debugger": {
+        "description": "Monitors and profiles model training jobs to optimize model performance.",
+        "status": "tested"
+    },
+    "Amazon Augmented AI (Amazon A2I)": {
+        "description": "Creates workflows for human review of ML model predictions.",
+        "status": "tested"
+    },
+    "Amazon SageMaker Autopilot": {
+        "description": "Provides insights into model predictions using tools from SageMaker Clarify.",
+        "status": "tested"
+    },
+    "Epoch": {
+        "description": "A single pass through the entire dataset in training.",
+        "status": "tested"
+    },
+    "AWS PrivateLink": {
+        "description": "Provides private connectivity between VPCs and AWS services without using the public internet.",
+        "status": "tested"
+    },
+    "Learning Rate": {
+        "description": "Controls the speed at which model parameters are updated during training, affecting convergence stability.",
+        "status": "tested"
+    },
+    "Supervised Learning": {
+        "description": "Training a model on labeled data to learn input-output mappings.",
+        "status": "tested"
+    },
+    "Unsupervised Learning": {
+        "description": "Model training on unlabeled data to discover patterns or clusters.",
+        "status": "tested"
+    },
+    "Semi-Supervised Learning": {
+        "description": "A hybrid approach using both labeled and unlabeled data for training.",
+        "status": "tested"
+    },
+    "Stop Sequences": {
+        "description": "Tokens that instruct a model to cease text generation, ensuring structured responses.",
+        "status": "tested"
+    },
+    "Intelligent Document Processing (IDP)": {
+        "description": "Automates data extraction from paper-based documents for digital processes.",
+        "status": "tested"
+    },
+    "Feature Extraction": {
+        "description": "Technique to create new features from raw data, useful for unstructured data like images or text.",
+        "status": "tested"
+    },
+    "Feature Selection": {
+        "description": "Selecting the most relevant features for modeling, reducing complexity.",
+        "status": "tested"
+    },
+    "Multi-Class Classification": {
+        "description": "A classification task with three or more classes, where each instance is assigned to one class.",
+        "status": "tested"
+    },
+    "Multi-Label Classification": {
+        "description": "Allows each instance to be associated with multiple classes simultaneously.",
+        "status": "tested"
+    },
+    "Amazon Bedrock Custom Model Import": {
+        "description": "Enables importing custom models to Bedrock for seamless use.",
+        "status": "tested"
+    },
+    "Amazon Bedrock Knowledge Bases": {
+        "description": "Provides context to foundation models using private data for Retrieval-Augmented Generation (RAG).",
+        "status": "tested"
+    }
 }
